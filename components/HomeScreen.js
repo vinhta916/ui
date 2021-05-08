@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button} from 'react-native';
-
+import SpeedDial from './SpeedDial';
 
 const HomeScreen = ({ navigation }) => {
     return (
@@ -18,6 +18,7 @@ const HomeScreen = ({ navigation }) => {
             }
         />
       <Text>Home Screen</Text>
+      <SpeedDial navigation={navigation} />
     </View>
     )
 }

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { View, Text} from 'react-native';
-import UserContext from './contexts/UserContext'
+
+import UserContext from '../contexts/UserContext'
+import SpeedDial from './SpeedDial';
 
 
 const Profile = ({ navigation, route}) => {
@@ -16,6 +18,7 @@ const Profile = ({ navigation, route}) => {
       }}
     >
       <Text>{ userContext.user}</Text>
+      <SpeedDial navigation={navigation} />
     </View>
     )
 }
