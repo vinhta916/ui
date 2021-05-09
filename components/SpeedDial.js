@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { SpeedDial } from 'react-native-elements';
 
 const DialButtons = ({ navigation }) => {
@@ -12,16 +11,19 @@ const DialButtons = ({ navigation }) => {
         openIcon={{ name: 'close', color: '#fff' }}
         onOpen={() =>setOpen(true)}
         onClose={() => setOpen(false)}
+        buttonStyle={{backgroundColor: '#2196F3'}}
     >
     <SpeedDial.Action
-        icon={{ name: 'add', color: '#fff' }}
+        icon={{ name: 'home', color: '#fff' }}
         title="Home"
-        onPress={() => navigation.navigate('Home') }
+        onPress={() => {navigation.navigate('Home'); setOpen(false) }}
+        buttonStyle={{backgroundColor: '#2196F3'}}
     />
     <SpeedDial.Action
-        icon={{ name: 'delete', color: '#fff' }}
+        icon={{ name: 'account-box', color: '#fff' }}
         title="Profile"
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => {navigation.navigate('Profile'); setOpen(false )}}
+        buttonStyle={{backgroundColor: '#2196F3'}}
     />
 
     </SpeedDial>
